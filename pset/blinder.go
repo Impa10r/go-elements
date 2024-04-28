@@ -569,7 +569,7 @@ func (b *Blinder) blindAsset(index int, asset, vbf, abf []byte) error {
 		return err
 	}
 
-	assetAmountSatoshi, _ := elementsutil.ValueFromBytes(assetAmount)
+	assetAmountSatoshi, err := elementsutil.ValueFromBytes(assetAmount)
 	if err != nil {
 		return err
 	}

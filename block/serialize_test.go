@@ -15,7 +15,7 @@ func TestBlockSerialization(t *testing.T) {
 		t.Fatal(err)
 	}
 	var tests []map[string]interface{}
-	err = json.Unmarshal(file, &tests)
+	json.Unmarshal(file, &tests)
 
 	for _, v := range tests {
 		testName := v["name"].(string)
